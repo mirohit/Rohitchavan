@@ -13,58 +13,54 @@
     ══════════════════════════════════════════ */
     :root,
     [data-theme="light"] {
-      --navy:      #0f2557;
-      --navy2:     #1a3478;
-      --blue:      #2563eb;
-      --blue-lt:   #dbeafe;
-      --teal:      #0d9488;
-      --teal-lt:   #ccfbf1;
-      --white:     #ffffff;
-      --off:       #f7f8fc;
-      --off2:      #eef1f8;
-      --border:    #dde3f0;
-      --text:      #0f1c3f;
-      --body:      #374162;
-      --muted:     #6b7a9e;
-      --shadow:    0 2px 24px rgba(15,37,87,0.08);
-      --shadow2:   0 8px 48px rgba(15,37,87,0.13);
-      --nav-bg:    rgba(255,255,255,0.93);
-      --hero-bg:   linear-gradient(135deg, #eef2ff 0%, #ffffff 55%, #f0fdfb 100%);
-      --dot-color: #b8c7e8;
-      --card-bg:   #ffffff;
+      --navy:        #0f2557;
+      --navy2:       #1a3478;
+      --blue:        #2563eb;
+      --blue-lt:     #dbeafe;
+      --teal:        #0d9488;
+      --teal-lt:     #ccfbf1;
+      --white:       #ffffff;
+      --off:         #f7f8fc;
+      --off2:        #eef1f8;
+      --border:      #dde3f0;
+      --text:        #0f1c3f;
+      --body:        #374162;
+      --muted:       #6b7a9e;
+      --shadow:      0 2px 24px rgba(15,37,87,0.08);
+      --shadow2:     0 8px 48px rgba(15,37,87,0.13);
+      --nav-bg:      rgba(255,255,255,0.93);
+      --hero-bg:     linear-gradient(135deg, #eef2ff 0%, #ffffff 55%, #f0fdfb 100%);
+      --dot-color:   #b8c7e8;
+      --card-bg:     #ffffff;
       --section-alt: #f7f8fc;
-      --contact-bg: #0f2557;
-      --toggle-bg: #eef1f8;
-      --toggle-icon: '🌙';
+      --contact-bg:  #0f2557;
     }
 
     /* ══════════════════════════════════════════
        DARK THEME
     ══════════════════════════════════════════ */
     [data-theme="dark"] {
-      --navy:      #93c5fd;
-      --navy2:     #bfdbfe;
-      --blue:      #60a5fa;
-      --blue-lt:   rgba(96,165,250,0.15);
-      --teal:      #2dd4bf;
-      --teal-lt:   rgba(45,212,191,0.15);
-      --white:     #0f172a;
-      --off:       #1e293b;
-      --off2:      #172033;
-      --border:    rgba(255,255,255,0.08);
-      --text:      #f1f5f9;
-      --body:      #cbd5e1;
-      --muted:     #94a3b8;
-      --shadow:    0 2px 24px rgba(0,0,0,0.3);
-      --shadow2:   0 8px 48px rgba(0,0,0,0.4);
-      --nav-bg:    rgba(15,23,42,0.95);
-      --hero-bg:   linear-gradient(135deg, #0f172a 0%, #1e293b 55%, #0f2030 100%);
-      --dot-color: #334155;
-      --card-bg:   #1e293b;
+      --navy:        #93c5fd;
+      --navy2:       #bfdbfe;
+      --blue:        #60a5fa;
+      --blue-lt:     rgba(96,165,250,0.15);
+      --teal:        #2dd4bf;
+      --teal-lt:     rgba(45,212,191,0.15);
+      --white:       #0f172a;
+      --off:         #1e293b;
+      --off2:        #172033;
+      --border:      rgba(255,255,255,0.08);
+      --text:        #f1f5f9;
+      --body:        #cbd5e1;
+      --muted:       #94a3b8;
+      --shadow:      0 2px 24px rgba(0,0,0,0.3);
+      --shadow2:     0 8px 48px rgba(0,0,0,0.4);
+      --nav-bg:      rgba(15,23,42,0.95);
+      --hero-bg:     linear-gradient(135deg, #0f172a 0%, #1e293b 55%, #0f2030 100%);
+      --dot-color:   #334155;
+      --card-bg:     #1e293b;
       --section-alt: #172033;
-      --contact-bg: #0d1117;
-      --toggle-bg: #1e293b;
-      --toggle-icon: '☀️';
+      --contact-bg:  #0d1117;
     }
 
     html { scroll-behavior: smooth; }
@@ -178,19 +174,17 @@
     [data-theme="dark"] .nav-cta { color: #0f172a !important; }
     .nav-cta:hover { opacity: 0.9; }
 
-    /* ─── DARK MODE TOGGLE BUTTON ─── */
+    /* ─── THEME TOGGLE ─── */
     .theme-toggle {
       width: 44px; height: 24px;
-      background: var(--toggle-bg);
+      background: var(--off2);
       border: 1.5px solid var(--border);
       border-radius: 99px;
       cursor: pointer;
       position: relative;
       transition: background 0.3s, border-color 0.3s;
       flex-shrink: 0;
-      margin-left: 0.5rem;
     }
-
     .theme-toggle::before {
       content: '';
       position: absolute;
@@ -202,24 +196,14 @@
       transition: left 0.3s cubic-bezier(0.4,0,0.2,1), background 0.3s;
       box-shadow: 0 1px 4px rgba(0,0,0,0.2);
     }
-
-    [data-theme="dark"] .theme-toggle::before {
-      left: 22px;
-      background: #f1c40f;
-    }
+    [data-theme="dark"] .theme-toggle::before { left: 22px; background: #f1c40f; }
 
     .theme-toggle-wrap {
       display: flex;
       align-items: center;
       gap: 0.5rem;
     }
-
-    .theme-icon {
-      font-size: 0.85rem;
-      line-height: 1;
-      user-select: none;
-      transition: opacity 0.3s;
-    }
+    .theme-icon { font-size: 0.85rem; line-height: 1; user-select: none; }
 
     .hamburger {
       display: none;
@@ -242,18 +226,15 @@
       background: var(--hero-bg);
       transition: background 0.4s;
     }
-
     #home::before {
       content: '';
-      position: absolute;
-      inset: 0;
+      position: absolute; inset: 0;
       background-image: radial-gradient(circle, var(--dot-color) 1px, transparent 1px);
       background-size: 32px 32px;
       opacity: 0.4;
       pointer-events: none;
       transition: opacity 0.4s;
     }
-
     #home::after {
       content: '';
       position: absolute;
@@ -300,7 +281,6 @@
       opacity: 0;
       animation: slideUp 0.6s 0.3s forwards;
     }
-
     .hero-tag-dot {
       width: 7px; height: 7px;
       background: var(--blue);
@@ -377,8 +357,7 @@
     }
     .btn::after {
       content: '';
-      position: absolute;
-      inset: 0;
+      position: absolute; inset: 0;
       background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.2) 50%, transparent 70%);
       background-size: 200% 100%;
       background-position: -200% center;
@@ -403,7 +382,6 @@
       animation: slideUp 0.7s 1.1s forwards;
       transition: border-color 0.4s;
     }
-
     .stat-num {
       font-family: 'Fraunces', serif;
       font-size: 2rem;
@@ -501,6 +479,7 @@
       animation: shimmer 3s linear infinite;
     }
 
+    /* Info rows */
     .profile-info {
       display: flex;
       flex-direction: column;
@@ -557,10 +536,12 @@
       animation: pulse 2s infinite;
     }
 
+    /* Social links */
     .profile-links {
       display: flex;
       justify-content: center;
       gap: 0.6rem;
+      margin-bottom: 1rem;
     }
 
     .profile-link {
@@ -574,6 +555,39 @@
       transition: border-color 0.2s, background 0.2s, color 0.2s, transform 0.2s;
     }
     .profile-link:hover { border-color: var(--blue); background: var(--blue-lt); color: var(--blue); transform: translateY(-3px); }
+
+    /* ─── RESUME DOWNLOAD BUTTON ─── */
+    .resume-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      width: 100%;
+      padding: 0.75rem 1.5rem;
+      background: linear-gradient(135deg, #0f2557, #2563eb);
+      color: #fff !important;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-radius: 10px;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: transform 0.25s, box-shadow 0.25s, opacity 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+    .resume-btn::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.18) 50%, transparent 70%);
+      background-size: 200% 100%;
+      background-position: -200% center;
+      transition: background-position 0.5s;
+    }
+    .resume-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,99,235,0.4); opacity: 0.95; }
+    .resume-btn:hover::after { background-position: 200% center; }
+
+    .resume-btn svg { flex-shrink: 0; }
 
     /* ─── SECTION WRAPPER ─── */
     .section-wrap {
@@ -644,11 +658,7 @@
     /* ─── EDUCATION ─── */
     #education { background: var(--section-alt); transition: background 0.4s; }
 
-    .edu-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
+    .edu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 
     .edu-card {
       background: var(--card-bg);
@@ -724,11 +734,7 @@
     /* ─── PROJECTS ─── */
     #projects { background: var(--white); transition: background 0.4s; }
 
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
+    .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 
     .project-card {
       background: var(--card-bg);
@@ -828,11 +834,7 @@
     /* ─── SKILLS ─── */
     #skills { background: var(--section-alt); transition: background 0.4s; }
 
-    .skills-layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-    }
+    .skills-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
 
     .skill-group {
       background: var(--card-bg);
@@ -860,12 +862,11 @@
       display: flex; align-items: center; justify-content: center;
       font-size: 1.1rem;
       flex-shrink: 0;
-      transition: transform 0.3s, background 0.4s;
+      transition: transform 0.3s;
     }
     .skill-group:hover .skill-icon { transform: rotate(-10deg) scale(1.15); }
 
     .skill-group-name { font-weight: 600; font-size: 0.9rem; color: var(--navy); transition: color 0.4s; }
-
     .skill-items { display: flex; flex-direction: column; gap: 0.9rem; }
     .skill-item { display: flex; align-items: center; gap: 1rem; }
     .skill-name { font-size: 0.85rem; color: var(--body); min-width: 120px; transition: color 0.4s; }
@@ -920,12 +921,9 @@
     .exp-period { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--blue); font-weight: 500; margin-bottom: 0.4rem; transition: color 0.4s; }
     .exp-location { font-size: 0.78rem; color: var(--muted); transition: color 0.4s; }
     .exp-sep { width: 1px; background: var(--border); align-self: stretch; transition: background 0.4s; }
-
     .exp-title { font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 600; color: var(--navy); margin-bottom: 0.3rem; transition: color 0.4s; }
-
     .exp-company { font-size: 0.88rem; color: var(--teal); font-weight: 600; margin-bottom: 1.2rem; text-decoration: none; display: inline-block; transition: opacity 0.2s, color 0.4s; }
     .exp-company:hover { opacity: 0.75; }
-
     .exp-points { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
     .exp-points li { font-size: 0.88rem; color: var(--body); padding-left: 1.1rem; position: relative; line-height: 1.6; transition: color 0.4s; }
     .exp-points li::before { content: '▸'; position: absolute; left: 0; color: var(--blue); font-size: 0.65rem; top: 5px; transition: color 0.4s; }
@@ -1022,7 +1020,6 @@
       justify-content: space-between;
       transition: background 0.4s;
     }
-
     .footer-copy { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: rgba(255,255,255,0.4); }
     .footer-back { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s, transform 0.2s; display: inline-block; }
     .footer-back:hover { color: #fff; transform: translateY(-2px); }
@@ -1058,7 +1055,6 @@
       .nav-links.open a { font-size: 1rem; padding: 0.75rem 1rem; }
       .hamburger { display: flex; }
       footer { flex-direction: column; gap: 0.5rem; text-align: center; }
-      .theme-toggle-wrap { gap: 0.3rem; }
     }
   </style>
 </head>
@@ -1079,11 +1075,10 @@
     <li><a href="#contact">Contact</a></li>
     <li><a href="#feedback" class="nav-cta">Feedback</a></li>
     <li>
-      <!-- Dark / Light toggle -->
       <div class="theme-toggle-wrap">
-        <span class="theme-icon" id="theme-icon-left">🌞</span>
-        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark / light mode"></button>
-        <span class="theme-icon" id="theme-icon-right">🌙</span>
+        <span class="theme-icon">🌞</span>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"></button>
+        <span class="theme-icon">🌙</span>
       </div>
     </li>
   </ul>
@@ -1094,11 +1089,9 @@
 <section id="home">
   <div class="hero-blob2"></div>
   <div class="hero-inner">
+
     <div>
-      <div class="hero-tag">
-        <span class="hero-tag-dot"></span>
-        Available for Opportunities
-      </div>
+      <div class="hero-tag"><span class="hero-tag-dot"></span>Available for Opportunities</div>
       <h1 class="hero-title">Hi, I'm <span>Rohit</span><br>Sagar Chavan</h1>
       <p class="hero-role">Data Analyst &amp; Aspiring Data Scientist</p>
       <p class="hero-desc" id="typing-text"><span class="typing-cursor"></span></p>
@@ -1122,6 +1115,7 @@
       </div>
     </div>
 
+    <!-- Profile Card -->
     <div class="hero-card">
       <div class="profile-frame">
         <div class="profile-header">
@@ -1136,6 +1130,7 @@
         <div class="profile-body">
           <div class="profile-name">Rohit Sagar Chavan</div>
           <div class="profile-title">Data.Analyst</div>
+
           <div class="profile-info">
             <div class="info-row">
               <div class="info-icon" style="background:#dcfce7;">📍</div>
@@ -1166,6 +1161,8 @@
               </div>
             </div>
           </div>
+
+          <!-- Social Links -->
           <div class="profile-links">
             <a href="mailto:rohitsurchavan4102@gmail.com" class="profile-link" title="Email">✉</a>
             <a href="https://www.linkedin.com/in/rohit-sagar-chavan" target="_blank" class="profile-link" title="LinkedIn">in</a>
@@ -1184,9 +1181,23 @@
             </a>
             <a href="tel:+918591253758" class="profile-link" title="Phone">☎</a>
           </div>
+
+          <!-- ✅ RESUME DOWNLOAD BUTTON -->
+          <a href="C:\Users\Rohit Sagar Chavan\OneDrive\Desktop\portfolio building\resume\Rohit Chavan Resume MSDS 2026.pdf"
+             download="Rohit_Sagar_Chavan_Resume.pdf"
+             class="resume-btn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Download Resume
+          </a>
+
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -1241,9 +1252,7 @@
         <div class="project-title">Google Play Store Analysis</div>
         <p class="project-desc">Analyzed Play Store app data to empower Android developers with insights. Processed app metadata and user reviews to surface actionable patterns for smarter product decisions and better user engagement.</p>
         <div class="project-footer">
-          <div class="project-tags">
-            <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Matplotlib</span>
-          </div>
+          <div class="project-tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Matplotlib</span></div>
           <a href="https://github.com/mirohit/Google-play-review-analysis" target="_blank" class="project-link">GitHub →</a>
         </div>
       </div>
@@ -1252,9 +1261,7 @@
         <div class="project-title">Loan Prediction Model</div>
         <p class="project-desc">Evaluated and compared multiple ML techniques to determine the most accurate approach for loan approval prediction. Delivered a validated, production-ready classification system with high accuracy.</p>
         <div class="project-footer">
-          <div class="project-tags">
-            <span class="tag">Scikit-learn</span><span class="tag">Python</span><span class="tag">EDA</span>
-          </div>
+          <div class="project-tags"><span class="tag">Scikit-learn</span><span class="tag">Python</span><span class="tag">EDA</span></div>
           <a href="https://github.com/mirohit/Machine-Learning-Project-on-Loan-prediction" target="_blank" class="project-link">GitHub →</a>
         </div>
       </div>
@@ -1263,9 +1270,7 @@
         <div class="project-title">Google Play Dashboard</div>
         <p class="project-desc">Built an interactive Tableau dashboard presenting Play Store analytics to help developers identify trends, track performance, and make data-backed engagement and product decisions.</p>
         <div class="project-footer">
-          <div class="project-tags">
-            <span class="tag">Tableau</span><span class="tag">Dashboard</span><span class="tag">Analytics</span>
-          </div>
+          <div class="project-tags"><span class="tag">Tableau</span><span class="tag">Dashboard</span><span class="tag">Analytics</span></div>
           <a href="https://public.tableau.com/app/profile/rohit.chavan8156/viz/GooglePlaystoreDataReviewAnalysis/Dashboard1" target="_blank" class="project-link">Tableau →</a>
         </div>
       </div>
@@ -1444,14 +1449,11 @@
   /* ── DARK / LIGHT MODE ── */
   const html = document.documentElement;
   const toggleBtn = document.getElementById('theme-toggle');
-
-  // Load saved preference or default to light
   const saved = localStorage.getItem('theme') || 'light';
   html.setAttribute('data-theme', saved);
 
   toggleBtn.addEventListener('click', () => {
-    const current = html.getAttribute('data-theme');
-    const next = current === 'light' ? 'dark' : 'light';
+    const next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
     html.setAttribute('data-theme', next);
     localStorage.setItem('theme', next);
   });
