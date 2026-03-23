@@ -1095,7 +1095,7 @@
     const y=((e.clientY-r.top)/r.height*100).toFixed(1);
 
     // Updated yellow glow (works in both themes)
-    card.style.background=`radial-gradient(circle at ${x}% ${y}%, rgba(255, 215, 0, 0.21) 0%, var(--card-bg) 65%)`;
+    card.style.background=`radial-gradient(circle at ${x}% ${y}%, rgba(0, 170, 255, 0.35) 0%, var(--card-bg) 65%)`;
   });
   card.addEventListener('mouseleave',()=>{card.style.background='';});
 });
